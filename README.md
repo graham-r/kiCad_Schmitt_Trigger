@@ -8,8 +8,9 @@ prolonged, non existent, or intermittent. This makes using these devices with mi
 Software methods can be made effective but they do take up clock cycles which can be a problem on 
 micro-controllers with limited resources. In addition using them with interrupts can lead to interrupt cascades.
 
-A hardware based solution is considered to the best solution, the designs here are those designed by 
-Jack G, Ganssle and also the subject of several videos by Ralph S Bacon.
+A hardware based solution is considered to be the best method of solving the problem, the basic electronic circuits
+were designed by Jack G, Ganssle and also the subject of several videos by Ralph S Bacon. The kiCad schematics, PCB's 
+etc were created by me.
 
 Designs based on the Texas Instruments SN74AC14 Hex Schmitt Inverters or the Texas Instruments
 SN74LVC3G17 Triple Schmitt-Trigger Buffer IC's.
