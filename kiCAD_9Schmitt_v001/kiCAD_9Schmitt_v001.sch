@@ -1,0 +1,1000 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Connector_Generic:Conn_01x02 JP1
+U 1 1 61B21F5A
+P 8400 950
+F 0 "JP1" H 8480 942 50  0000 L CNN
+F 1 "Pwr" H 8350 1050 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-02A_1x02_P2.54mm_Vertical" H 8400 950 50  0001 C CNN
+F 3 "~" H 8400 950 50  0001 C CNN
+	1    8400 950 
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:GND #PWR01
+U 1 1 61B29A48
+P 7950 1150
+F 0 "#PWR01" H 7950 900 50  0001 C CNN
+F 1 "GND" H 7955 977 50  0000 C CNN
+F 2 "" H 7950 1150 50  0001 C CNN
+F 3 "" H 7950 1150 50  0001 C CNN
+	1    7950 1150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	7950 1150 7950 1050
+Wire Wire Line
+	7950 1050 8200 1050
+$Comp
+L Connector_Generic:Conn_01x03 J1
+U 1 1 61B590AC
+P 1800 2350
+F 0 "J1" H 1900 2300 50  0000 C CNN
+F 1 "Sig_In" H 1718 2676 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 1800 2350 50  0001 C CNN
+F 3 "~" H 1800 2350 50  0001 C CNN
+	1    1800 2350
+	-1   0    0    -1  
+$EndComp
+$Comp
+L 74xGxx:74LVC3G14 U1
+U 1 1 619EC3D6
+P 6050 1600
+F 0 "U1" H 6025 1867 50  0000 C CNN
+F 1 "74LVC3G14" H 6025 1776 50  0000 C CNN
+F 2 "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm" H 6050 1600 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74lvc3g14.pdf" H 6050 1600 50  0001 C CNN
+	1    6050 1600
+	1    0    0    -1  
+$EndComp
+$Comp
+L Connector_Generic:Conn_01x03 J13
+U 1 1 61B1F759
+P 8300 5450
+F 0 "J13" H 8380 5442 50  0000 L CNN
+F 1 "Trig_Out" H 8150 5750 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 8300 5450 50  0001 C CNN
+F 3 "~" H 8300 5450 50  0001 C CNN
+	1    8300 5450
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	3300 1600 2950 1600
+Wire Wire Line
+	3600 1600 3750 1600
+Wire Wire Line
+	4150 1800 4150 1600
+Connection ~ 4150 1800
+Wire Wire Line
+	4100 1800 4150 1800
+Wire Wire Line
+	4150 1600 5750 1600
+Connection ~ 4150 1600
+Wire Wire Line
+	4200 1800 4150 1800
+$Comp
+L Device:C C1
+U 1 1 619D2E8F
+P 4350 1800
+F 0 "C1" V 4300 1650 50  0000 L CNN
+F 1 "100nF" V 4500 1700 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4388 1650 50  0001 C CNN
+F 3 "~" H 4350 1800 50  0001 C CNN
+	1    4350 1800
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D1
+U 1 1 619D2140
+P 3950 1600
+F 0 "D1" H 3950 1383 50  0000 C CNN
+F 1 "1N4148" H 3950 1474 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 3950 1425 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3950 1600 50  0001 C CNN
+	1    3950 1600
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4100 1600 4150 1600
+Wire Wire Line
+	3800 1600 3750 1600
+$Comp
+L Device:R R2
+U 1 1 619D627B
+P 3950 1800
+F 0 "R2" V 3850 1750 50  0000 L CNN
+F 1 "18K2" V 3950 1700 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3880 1800 50  0001 C CNN
+F 3 "~" H 3950 1800 50  0001 C CNN
+	1    3950 1800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 1800 3750 1800
+Connection ~ 3750 1800
+Connection ~ 3750 1600
+Wire Wire Line
+	3750 1800 3750 1600
+$Comp
+L Device:R R1
+U 1 1 619D386E
+P 3450 1600
+F 0 "R1" V 3350 1550 50  0000 L CNN
+F 1 "82K" V 3450 1500 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3380 1600 50  0001 C CNN
+F 3 "~" H 3450 1600 50  0001 C CNN
+	1    3450 1600
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 2150 2950 2150
+Wire Wire Line
+	3600 2150 3750 2150
+Wire Wire Line
+	4150 2350 4150 2150
+Connection ~ 4150 2350
+Wire Wire Line
+	4100 2350 4150 2350
+Wire Wire Line
+	4150 2150 5750 2150
+Connection ~ 4150 2150
+Wire Wire Line
+	4200 2350 4150 2350
+$Comp
+L Device:C C2
+U 1 1 61A568F9
+P 4350 2350
+F 0 "C2" V 4300 2200 50  0000 L CNN
+F 1 "100nF" V 4500 2250 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4388 2200 50  0001 C CNN
+F 3 "~" H 4350 2350 50  0001 C CNN
+	1    4350 2350
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D2
+U 1 1 61A568FF
+P 3950 2150
+F 0 "D2" H 3950 1933 50  0000 C CNN
+F 1 "1N4148" H 3950 2024 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 3950 1975 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3950 2150 50  0001 C CNN
+	1    3950 2150
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4100 2150 4150 2150
+Wire Wire Line
+	3800 2150 3750 2150
+$Comp
+L Device:R R4
+U 1 1 61A56907
+P 3950 2350
+F 0 "R4" V 3850 2300 50  0000 L CNN
+F 1 "18K2" V 3950 2250 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3880 2350 50  0001 C CNN
+F 3 "~" H 3950 2350 50  0001 C CNN
+	1    3950 2350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 2350 3750 2350
+Connection ~ 3750 2350
+Connection ~ 3750 2150
+Wire Wire Line
+	3750 2350 3750 2150
+$Comp
+L Device:R R3
+U 1 1 61A56912
+P 3450 2150
+F 0 "R3" V 3350 2100 50  0000 L CNN
+F 1 "82K" V 3450 2050 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3380 2150 50  0001 C CNN
+F 3 "~" H 3450 2150 50  0001 C CNN
+	1    3450 2150
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 2700 2950 2700
+Wire Wire Line
+	3600 2700 3750 2700
+Wire Wire Line
+	4150 2900 4150 2700
+Connection ~ 4150 2900
+Wire Wire Line
+	4100 2900 4150 2900
+Wire Wire Line
+	4150 2700 5700 2700
+Connection ~ 4150 2700
+Wire Wire Line
+	4200 2900 4150 2900
+$Comp
+L Device:C C3
+U 1 1 61A58647
+P 4350 2900
+F 0 "C3" V 4300 2750 50  0000 L CNN
+F 1 "100nF" V 4500 2800 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4388 2750 50  0001 C CNN
+F 3 "~" H 4350 2900 50  0001 C CNN
+	1    4350 2900
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D3
+U 1 1 61A5864D
+P 3950 2700
+F 0 "D3" H 3950 2483 50  0000 C CNN
+F 1 "1N4148" H 3950 2574 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 3950 2525 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3950 2700 50  0001 C CNN
+	1    3950 2700
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4100 2700 4150 2700
+Wire Wire Line
+	3800 2700 3750 2700
+$Comp
+L Device:R R6
+U 1 1 61A58655
+P 3950 2900
+F 0 "R6" V 3850 2850 50  0000 L CNN
+F 1 "18K2" V 3950 2800 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3880 2900 50  0001 C CNN
+F 3 "~" H 3950 2900 50  0001 C CNN
+	1    3950 2900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 2900 3750 2900
+Connection ~ 3750 2900
+Connection ~ 3750 2700
+Wire Wire Line
+	3750 2900 3750 2700
+$Comp
+L Device:R R5
+U 1 1 61A58660
+P 3450 2700
+F 0 "R5" V 3350 2650 50  0000 L CNN
+F 1 "82K" V 3450 2600 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3380 2700 50  0001 C CNN
+F 3 "~" H 3450 2700 50  0001 C CNN
+	1    3450 2700
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 3250 2950 3250
+Wire Wire Line
+	3600 3250 3750 3250
+Wire Wire Line
+	4150 3450 4150 3250
+Connection ~ 4150 3450
+Wire Wire Line
+	4100 3450 4150 3450
+Wire Wire Line
+	4150 3250 5700 3250
+Connection ~ 4150 3250
+Wire Wire Line
+	4200 3450 4150 3450
+$Comp
+L Device:C C4
+U 1 1 61A63E86
+P 4350 3450
+F 0 "C4" V 4300 3300 50  0000 L CNN
+F 1 "100nF" V 4500 3350 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4388 3300 50  0001 C CNN
+F 3 "~" H 4350 3450 50  0001 C CNN
+	1    4350 3450
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D4
+U 1 1 61A63E8C
+P 3950 3250
+F 0 "D4" H 3950 3033 50  0000 C CNN
+F 1 "1N4148" H 3950 3124 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 3950 3075 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3950 3250 50  0001 C CNN
+	1    3950 3250
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4100 3250 4150 3250
+Wire Wire Line
+	3800 3250 3750 3250
+$Comp
+L Device:R R8
+U 1 1 61A63E94
+P 3950 3450
+F 0 "R8" V 3850 3400 50  0000 L CNN
+F 1 "18K2" V 3950 3350 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3880 3450 50  0001 C CNN
+F 3 "~" H 3950 3450 50  0001 C CNN
+	1    3950 3450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 3450 3750 3450
+Connection ~ 3750 3450
+Connection ~ 3750 3250
+Wire Wire Line
+	3750 3450 3750 3250
+$Comp
+L Device:R R7
+U 1 1 61A63E9F
+P 3450 3250
+F 0 "R7" V 3350 3200 50  0000 L CNN
+F 1 "82K" V 3450 3150 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3380 3250 50  0001 C CNN
+F 3 "~" H 3450 3250 50  0001 C CNN
+	1    3450 3250
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 3800 2950 3800
+Wire Wire Line
+	3600 3800 3750 3800
+Wire Wire Line
+	4150 4000 4150 3800
+Connection ~ 4150 4000
+Wire Wire Line
+	4100 4000 4150 4000
+Wire Wire Line
+	4150 3800 5700 3800
+Connection ~ 4150 3800
+Wire Wire Line
+	4200 4000 4150 4000
+$Comp
+L Device:C C5
+U 1 1 61A63EAF
+P 4350 4000
+F 0 "C5" V 4300 3850 50  0000 L CNN
+F 1 "100nF" V 4500 3900 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4388 3850 50  0001 C CNN
+F 3 "~" H 4350 4000 50  0001 C CNN
+	1    4350 4000
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D5
+U 1 1 61A63EB5
+P 3950 3800
+F 0 "D5" H 3950 3583 50  0000 C CNN
+F 1 "1N4148" H 3950 3674 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 3950 3625 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3950 3800 50  0001 C CNN
+	1    3950 3800
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4100 3800 4150 3800
+Wire Wire Line
+	3800 3800 3750 3800
+$Comp
+L Device:R R10
+U 1 1 61A63EBD
+P 3950 4000
+F 0 "R10" V 3850 3950 50  0000 L CNN
+F 1 "18K2" V 3950 3900 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3880 4000 50  0001 C CNN
+F 3 "~" H 3950 4000 50  0001 C CNN
+	1    3950 4000
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 4000 3750 4000
+Connection ~ 3750 4000
+Connection ~ 3750 3800
+Wire Wire Line
+	3750 4000 3750 3800
+$Comp
+L Device:R R9
+U 1 1 61A63EC8
+P 3450 3800
+F 0 "R9" V 3350 3750 50  0000 L CNN
+F 1 "82K" V 3450 3700 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3380 3800 50  0001 C CNN
+F 3 "~" H 3450 3800 50  0001 C CNN
+	1    3450 3800
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 4350 2950 4350
+Wire Wire Line
+	3600 4350 3750 4350
+Wire Wire Line
+	4150 4550 4150 4350
+Connection ~ 4150 4550
+Wire Wire Line
+	4100 4550 4150 4550
+Wire Wire Line
+	4150 4350 5650 4350
+Connection ~ 4150 4350
+Wire Wire Line
+	4200 4550 4150 4550
+$Comp
+L Device:C C6
+U 1 1 61A63ED8
+P 4350 4550
+F 0 "C6" V 4300 4400 50  0000 L CNN
+F 1 "100nF" V 4500 4450 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4388 4400 50  0001 C CNN
+F 3 "~" H 4350 4550 50  0001 C CNN
+	1    4350 4550
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D6
+U 1 1 61A63EDE
+P 3950 4350
+F 0 "D6" H 3950 4133 50  0000 C CNN
+F 1 "1N4148" H 3950 4224 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 3950 4175 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3950 4350 50  0001 C CNN
+	1    3950 4350
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4100 4350 4150 4350
+Wire Wire Line
+	3800 4350 3750 4350
+$Comp
+L Device:R R12
+U 1 1 61A63EE6
+P 3950 4550
+F 0 "R12" V 3850 4500 50  0000 L CNN
+F 1 "18K2" V 3950 4450 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3880 4550 50  0001 C CNN
+F 3 "~" H 3950 4550 50  0001 C CNN
+	1    3950 4550
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 4550 3750 4550
+Connection ~ 3750 4550
+Connection ~ 3750 4350
+Wire Wire Line
+	3750 4550 3750 4350
+$Comp
+L Device:R R11
+U 1 1 61A63EF1
+P 3450 4350
+F 0 "R11" V 3350 4300 50  0000 L CNN
+F 1 "82K" V 3450 4250 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3380 4350 50  0001 C CNN
+F 3 "~" H 3450 4350 50  0001 C CNN
+	1    3450 4350
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 4900 2950 4900
+Wire Wire Line
+	3600 4900 3750 4900
+Wire Wire Line
+	4150 5100 4150 4900
+Connection ~ 4150 5100
+Wire Wire Line
+	4100 5100 4150 5100
+Wire Wire Line
+	4150 4900 5650 4900
+Connection ~ 4150 4900
+Wire Wire Line
+	4200 5100 4150 5100
+$Comp
+L Device:C C7
+U 1 1 61A69B6C
+P 4350 5100
+F 0 "C7" V 4300 4950 50  0000 L CNN
+F 1 "100nF" V 4500 5000 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4388 4950 50  0001 C CNN
+F 3 "~" H 4350 5100 50  0001 C CNN
+	1    4350 5100
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D7
+U 1 1 61A69B72
+P 3950 4900
+F 0 "D7" H 3950 4683 50  0000 C CNN
+F 1 "1N4148" H 3950 4774 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 3950 4725 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3950 4900 50  0001 C CNN
+	1    3950 4900
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4100 4900 4150 4900
+Wire Wire Line
+	3800 4900 3750 4900
+$Comp
+L Device:R R14
+U 1 1 61A69B7A
+P 3950 5100
+F 0 "R14" V 3850 5050 50  0000 L CNN
+F 1 "18K2" V 3950 5000 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3880 5100 50  0001 C CNN
+F 3 "~" H 3950 5100 50  0001 C CNN
+	1    3950 5100
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 5100 3750 5100
+Connection ~ 3750 5100
+Connection ~ 3750 4900
+Wire Wire Line
+	3750 5100 3750 4900
+$Comp
+L Device:R R13
+U 1 1 61A69B85
+P 3450 4900
+F 0 "R13" V 3350 4850 50  0000 L CNN
+F 1 "82K" V 3450 4800 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3380 4900 50  0001 C CNN
+F 3 "~" H 3450 4900 50  0001 C CNN
+	1    3450 4900
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 5450 2950 5450
+Wire Wire Line
+	3600 5450 3750 5450
+Wire Wire Line
+	4150 5650 4150 5450
+Connection ~ 4150 5650
+Wire Wire Line
+	4100 5650 4150 5650
+Wire Wire Line
+	4150 5450 5650 5450
+Connection ~ 4150 5450
+Wire Wire Line
+	4200 5650 4150 5650
+$Comp
+L Device:C C8
+U 1 1 61A69B95
+P 4350 5650
+F 0 "C8" V 4300 5500 50  0000 L CNN
+F 1 "100nF" V 4500 5550 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4388 5500 50  0001 C CNN
+F 3 "~" H 4350 5650 50  0001 C CNN
+	1    4350 5650
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D8
+U 1 1 61A69B9B
+P 3950 5450
+F 0 "D8" H 3950 5233 50  0000 C CNN
+F 1 "1N4148" H 3950 5324 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 3950 5275 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3950 5450 50  0001 C CNN
+	1    3950 5450
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4100 5450 4150 5450
+Wire Wire Line
+	3800 5450 3750 5450
+$Comp
+L Device:R R16
+U 1 1 61A69BA3
+P 3950 5650
+F 0 "R16" V 3850 5600 50  0000 L CNN
+F 1 "18K2" V 3950 5550 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3880 5650 50  0001 C CNN
+F 3 "~" H 3950 5650 50  0001 C CNN
+	1    3950 5650
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 5650 3750 5650
+Connection ~ 3750 5650
+Connection ~ 3750 5450
+Wire Wire Line
+	3750 5650 3750 5450
+$Comp
+L Device:R R15
+U 1 1 61A69BAE
+P 3450 5450
+F 0 "R15" V 3350 5400 50  0000 L CNN
+F 1 "82K" V 3450 5350 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3380 5450 50  0001 C CNN
+F 3 "~" H 3450 5450 50  0001 C CNN
+	1    3450 5450
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3300 6000 2950 6000
+Wire Wire Line
+	3600 6000 3750 6000
+Wire Wire Line
+	4150 6200 4150 6000
+Connection ~ 4150 6200
+Wire Wire Line
+	4100 6200 4150 6200
+Wire Wire Line
+	4150 6000 5600 6000
+Connection ~ 4150 6000
+Wire Wire Line
+	4200 6200 4150 6200
+$Comp
+L Device:C C9
+U 1 1 61A69BBE
+P 4350 6200
+F 0 "C9" V 4300 6050 50  0000 L CNN
+F 1 "100nF" V 4500 6100 50  0000 L CNN
+F 2 "Capacitor_THT:C_Disc_D5.0mm_W2.5mm_P5.00mm" H 4388 6050 50  0001 C CNN
+F 3 "~" H 4350 6200 50  0001 C CNN
+	1    4350 6200
+	0    1    1    0   
+$EndComp
+$Comp
+L Diode:1N4148 D9
+U 1 1 61A69BC4
+P 3950 6000
+F 0 "D9" H 3950 5783 50  0000 C CNN
+F 1 "1N4148" H 3950 5874 50  0000 C CNN
+F 2 "Diode_THT:D_DO-35_SOD27_P2.54mm_Vertical_KathodeUp" H 3950 5825 50  0001 C CNN
+F 3 "https://assets.nexperia.com/documents/data-sheet/1N4148_1N4448.pdf" H 3950 6000 50  0001 C CNN
+	1    3950 6000
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4100 6000 4150 6000
+Wire Wire Line
+	3800 6000 3750 6000
+$Comp
+L Device:R R18
+U 1 1 61A69BCC
+P 3950 6200
+F 0 "R18" V 3850 6150 50  0000 L CNN
+F 1 "18K2" V 3950 6100 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3880 6200 50  0001 C CNN
+F 3 "~" H 3950 6200 50  0001 C CNN
+	1    3950 6200
+	0    1    1    0   
+$EndComp
+Wire Wire Line
+	3800 6200 3750 6200
+Connection ~ 3750 6200
+Connection ~ 3750 6000
+Wire Wire Line
+	3750 6200 3750 6000
+$Comp
+L Device:R R17
+U 1 1 61A69BD7
+P 3450 6000
+F 0 "R17" V 3350 5950 50  0000 L CNN
+F 1 "82K" V 3450 5900 50  0000 L CNN
+F 2 "Resistor_THT:R_Axial_DIN0207_L6.3mm_D2.5mm_P2.54mm_Vertical" V 3380 6000 50  0001 C CNN
+F 3 "~" H 3450 6000 50  0001 C CNN
+	1    3450 6000
+	0    1    1    0   
+$EndComp
+$Comp
+L 74xGxx:74LVC3G14 U1
+U 2 1 61AAD881
+P 6050 2150
+F 0 "U1" H 6025 2417 50  0000 C CNN
+F 1 "74LVC3G14" H 6025 2326 50  0000 C CNN
+F 2 "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm" H 6050 2150 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74lvc3g14.pdf" H 6050 2150 50  0001 C CNN
+	2    6050 2150
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xGxx:74LVC3G14 U1
+U 3 1 61AB404C
+P 6000 2700
+F 0 "U1" H 5975 2967 50  0000 C CNN
+F 1 "74LVC3G14" H 5975 2876 50  0000 C CNN
+F 2 "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm" H 6000 2700 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74lvc3g14.pdf" H 6000 2700 50  0001 C CNN
+	3    6000 2700
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xGxx:74LVC3G14 U2
+U 1 1 61ABE798
+P 6000 3250
+F 0 "U2" H 5975 3517 50  0000 C CNN
+F 1 "74LVC3G14" H 5975 3426 50  0000 C CNN
+F 2 "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm" H 6000 3250 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74lvc3g14.pdf" H 6000 3250 50  0001 C CNN
+	1    6000 3250
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xGxx:74LVC3G14 U2
+U 2 1 61ABE79E
+P 6000 3800
+F 0 "U2" H 5975 4067 50  0000 C CNN
+F 1 "74LVC3G14" H 5975 3976 50  0000 C CNN
+F 2 "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm" H 6000 3800 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74lvc3g14.pdf" H 6000 3800 50  0001 C CNN
+	2    6000 3800
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xGxx:74LVC3G14 U2
+U 3 1 61ABE7A4
+P 5950 4350
+F 0 "U2" H 5925 4617 50  0000 C CNN
+F 1 "74LVC3G14" H 5925 4526 50  0000 C CNN
+F 2 "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm" H 5950 4350 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74lvc3g14.pdf" H 5950 4350 50  0001 C CNN
+	3    5950 4350
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 4900 6450 4900
+$Comp
+L 74xGxx:74LVC3G14 U3
+U 1 1 61AC74D1
+P 5950 4900
+F 0 "U3" H 5925 5167 50  0000 C CNN
+F 1 "74LVC3G14" H 5925 5076 50  0000 C CNN
+F 2 "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm" H 5950 4900 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74lvc3g14.pdf" H 5950 4900 50  0001 C CNN
+	1    5950 4900
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xGxx:74LVC3G14 U3
+U 2 1 61AC74D7
+P 5950 5450
+F 0 "U3" H 5925 5717 50  0000 C CNN
+F 1 "74LVC3G14" H 5925 5626 50  0000 C CNN
+F 2 "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm" H 5950 5450 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74lvc3g14.pdf" H 5950 5450 50  0001 C CNN
+	2    5950 5450
+	1    0    0    -1  
+$EndComp
+$Comp
+L 74xGxx:74LVC3G14 U3
+U 3 1 61AC74DD
+P 5900 6000
+F 0 "U3" H 5875 6267 50  0000 C CNN
+F 1 "74LVC3G14" H 5875 6176 50  0000 C CNN
+F 2 "Package_SO:SSOP-8_2.95x2.8mm_P0.65mm" H 5900 6000 50  0001 C CNN
+F 3 "https://www.ti.com/lit/ds/symlink/sn74lvc3g14.pdf" H 5900 6000 50  0001 C CNN
+	3    5900 6000
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6200 5450 8100 5450
+Wire Wire Line
+	6150 6000 6450 6000
+Wire Wire Line
+	6450 6000 6450 5550
+Wire Wire Line
+	6450 5550 8100 5550
+Wire Wire Line
+	6450 4900 6450 5350
+Wire Wire Line
+	6450 5350 8100 5350
+$Comp
+L Connector_Generic:Conn_01x03 J12
+U 1 1 61B3D1F6
+P 8350 3800
+F 0 "J12" H 8430 3792 50  0000 L CNN
+F 1 "Trig_Out" H 8200 4100 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 8350 3800 50  0001 C CNN
+F 3 "~" H 8350 3800 50  0001 C CNN
+	1    8350 3800
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6250 3250 6500 3250
+Wire Wire Line
+	6250 3800 8150 3800
+Wire Wire Line
+	6200 4350 6500 4350
+Wire Wire Line
+	6500 4350 6500 3900
+Wire Wire Line
+	6500 3900 8150 3900
+Wire Wire Line
+	6500 3250 6500 3700
+Wire Wire Line
+	6500 3700 8150 3700
+$Comp
+L Connector_Generic:Conn_01x03 J11
+U 1 1 61B43496
+P 8400 2150
+F 0 "J11" H 8480 2142 50  0000 L CNN
+F 1 "Trig_Out" H 8250 2450 50  0000 L CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 8400 2150 50  0001 C CNN
+F 3 "~" H 8400 2150 50  0001 C CNN
+	1    8400 2150
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	6300 1600 6550 1600
+Wire Wire Line
+	6300 2150 8200 2150
+Wire Wire Line
+	6250 2700 6550 2700
+Wire Wire Line
+	6550 2700 6550 2250
+Wire Wire Line
+	6550 2250 8200 2250
+Wire Wire Line
+	6550 1600 6550 2050
+Wire Wire Line
+	6550 2050 8200 2050
+Wire Wire Line
+	2950 6000 2950 5450
+Connection ~ 2950 1600
+Connection ~ 2950 2150
+Wire Wire Line
+	2950 2150 2950 1600
+Connection ~ 2950 2700
+Wire Wire Line
+	2950 2700 2950 2150
+Connection ~ 2950 3250
+Wire Wire Line
+	2950 3250 2950 2700
+Connection ~ 2950 3800
+Wire Wire Line
+	2950 3800 2950 3250
+Connection ~ 2950 4350
+Wire Wire Line
+	2950 4350 2950 3800
+Connection ~ 2950 4900
+Wire Wire Line
+	2950 4900 2950 4350
+Connection ~ 2950 5450
+Wire Wire Line
+	2950 5450 2950 4900
+Wire Wire Line
+	2000 2350 3750 2350
+Wire Wire Line
+	2000 2250 2300 2250
+Wire Wire Line
+	2300 2250 2300 1800
+Wire Wire Line
+	2300 1800 3750 1800
+Wire Wire Line
+	2000 2450 2300 2450
+Wire Wire Line
+	2300 2450 2300 2900
+Wire Wire Line
+	2300 2900 3750 2900
+$Comp
+L Connector_Generic:Conn_01x03 J2
+U 1 1 61BD7289
+P 1800 4000
+F 0 "J2" H 1900 3950 50  0000 C CNN
+F 1 "Sig_In" H 1718 4326 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 1800 4000 50  0001 C CNN
+F 3 "~" H 1800 4000 50  0001 C CNN
+	1    1800 4000
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 3900 2300 3900
+Wire Wire Line
+	2300 3900 2300 3450
+Wire Wire Line
+	2000 4100 2300 4100
+Wire Wire Line
+	2300 4100 2300 4550
+Wire Wire Line
+	2300 3450 3750 3450
+Wire Wire Line
+	2000 4000 3750 4000
+Wire Wire Line
+	2300 4550 3750 4550
+$Comp
+L Connector_Generic:Conn_01x03 J3
+U 1 1 61BE07C6
+P 1800 5650
+F 0 "J3" H 1900 5600 50  0000 C CNN
+F 1 "Sig_In" H 1718 5976 50  0000 C CNN
+F 2 "Connector_Molex:Molex_KK-254_AE-6410-03A_1x03_P2.54mm_Vertical" H 1800 5650 50  0001 C CNN
+F 3 "~" H 1800 5650 50  0001 C CNN
+	1    1800 5650
+	-1   0    0    -1  
+$EndComp
+Wire Wire Line
+	2000 5550 2300 5550
+Wire Wire Line
+	2300 5550 2300 5100
+Wire Wire Line
+	2000 5750 2300 5750
+Wire Wire Line
+	2300 5750 2300 6200
+Wire Wire Line
+	2300 5100 3750 5100
+Wire Wire Line
+	2000 5650 3750 5650
+Wire Wire Line
+	2300 6200 3750 6200
+Wire Wire Line
+	4500 6200 4750 6200
+Wire Wire Line
+	4750 6200 4750 6550
+Wire Wire Line
+	4750 6200 4750 5650
+Wire Wire Line
+	4750 1800 4500 1800
+Connection ~ 4750 6200
+Wire Wire Line
+	4500 2350 4750 2350
+Connection ~ 4750 2350
+Wire Wire Line
+	4750 2350 4750 1800
+Wire Wire Line
+	4500 2900 4750 2900
+Connection ~ 4750 2900
+Wire Wire Line
+	4750 2900 4750 2350
+Wire Wire Line
+	4500 3450 4750 3450
+Connection ~ 4750 3450
+Wire Wire Line
+	4750 3450 4750 2900
+Wire Wire Line
+	4500 4000 4750 4000
+Connection ~ 4750 4000
+Wire Wire Line
+	4750 4000 4750 3450
+Wire Wire Line
+	4500 4550 4750 4550
+Connection ~ 4750 4550
+Wire Wire Line
+	4750 4550 4750 4000
+Wire Wire Line
+	4500 5100 4750 5100
+Connection ~ 4750 5100
+Wire Wire Line
+	4750 5100 4750 4550
+Wire Wire Line
+	4500 5650 4750 5650
+Connection ~ 4750 5650
+Wire Wire Line
+	4750 5650 4750 5100
+Wire Wire Line
+	2950 950  7950 950 
+Wire Wire Line
+	2950 950  2950 1600
+$Comp
+L power:GND #PWR02
+U 1 1 61C725F3
+P 4750 6550
+F 0 "#PWR02" H 4750 6300 50  0001 C CNN
+F 1 "GND" H 4755 6377 50  0000 C CNN
+F 2 "" H 4750 6550 50  0001 C CNN
+F 3 "" H 4750 6550 50  0001 C CNN
+	1    4750 6550
+	1    0    0    -1  
+$EndComp
+$Comp
+L power:VCC #PWR?
+U 1 1 61A148B4
+P 7950 950
+F 0 "#PWR?" H 7950 800 50  0001 C CNN
+F 1 "VCC" H 7965 1123 50  0000 C CNN
+F 2 "" H 7950 950 50  0001 C CNN
+F 3 "" H 7950 950 50  0001 C CNN
+	1    7950 950 
+	1    0    0    -1  
+$EndComp
+Connection ~ 7950 950 
+Wire Wire Line
+	7950 950  8200 950 
+$EndSCHEMATC
